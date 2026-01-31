@@ -12,6 +12,10 @@ public class Checker {
 
         List<Integer> listOfPosition = new ArrayList<>();
 
+
+
+
+
         for (int i = 0; i < selectedWord.length(); i++) {
             if (selectedWord.charAt(i) == letter) {
                 listOfPosition.add(i);

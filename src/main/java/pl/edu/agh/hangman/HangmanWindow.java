@@ -12,19 +12,25 @@ public class HangmanWindow {
         this.HANGMANPICS = HANGMANPICS;
     }
 
-    public void printWindow() {
+    public void printWindow(List<Integer> listOfPosition) {
+        updateHangman(listOfPosition);
         System.out.println(actualPic);
     }
 
-    public void updateHangman(List<Integer> listOfPosition) {
+    private void updateHangman(List<Integer> listOfPosition) {
 
         if (listOfPosition.size() == 0) {
-            actualPic = HANGMANPICS[actualLevel + 1];
+            actualLevel = actualLevel+1;
+            this.actualPic = HANGMANPICS[actualLevel];
 
         }
-        if (actualLevel == HANGMANPICS.length - 1) {
-            System.out.println("KONIEC GRY");
 
+    }
+    public boolean endGame() {
+        if (actualLevel == HANGMANPICS.length - 1) {
+            return true;
+        } else  {
+            return false;
         }
     }
 
