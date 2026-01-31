@@ -40,5 +40,12 @@ public class LetterWindow {
         return guessWord == null ? "" : guessWord.toString();
     }
 
+    public void printWindow(String word, List<Integer> listOfPosition) {
+        setSelectedWord(word);
+        setListOfPosition(listOfPosition);
+        System.out.println(getGuessWord());
+
+    }
+
 
 }
